@@ -1,54 +1,58 @@
 $(function () {
-  // Global variables
-  var today = dayjs();
-  var eachBlock = $('.time-block');
-
   // Displays current date in the header
+  var today = dayjs();
   $('#todaysDate').text(today.format('dddd, MMM D YYYY'));
 
-  // Renders any saved blocks from local storage
-  function renderBlocks() {
-    var storedBlocks = localStorage.getItem('savedBlocks');
-
-    if (storedBlocks !== null) {
-      storedBlocks = JSON.parse(storedBlocks);
-      return storedBlocks;
-    } else {
-      return;
-    }
-  }
-  renderBlocks();
-
   // Listen for save clicks on any block --> Save input to storage
-  $('.save-button')('click', function(event) {
+  $('.save-button').on('click', function(event) {
     event.preventDefault();
-    var userInput = $(this).siblings(eachBlock).val();
-    var time = $(this).parent().attr("id").split("-")[1];
-    console.log(userInput);
-    localStorage.setItem(time, userInput);
+
+    var time = $(this).parent().attr('id');
+    var task = $(this).siblings('.details').val();
+
+    localStorage.setItem(time, task);
+  });
+
+  $('.clear-button').on("click", function(event) {
+    event.preventDefault();
+
+    var task = $(this).siblings('.details');
+
+    task.val("Add Task");
+    localStorage.clear(task.val());
+
+  });
+
+  // Get current time
+  var timeBlock = $('.time-block');
+  var currentHour = dayjs().hour();
+
+  // Compare id of block to the current time
+  timeBlock.each(function () {
+    var chosenTime = parseInt($(this).attr("id").split("hour-")[1]);
+
+    if (chosenTime < currentHour) {
+      timeBlock.addClass('past');
+    } else if (chosenTime === currentHour) {
+      timeBlock.addClass('present');
+    } else {
+      timeBlock.addClass('future');
+    }
+
   });
 
 
-  function addClasses() {
-    // Get current time
-    var blockTime = $(this).attr("id").split("-")[1];
-    var currentHour = dayjs().hour();
-
-    // Compare id of block to the current time
-    if (blockTime.isBefore(currentHour)) {
-      eachBlock.addClass('past');
-    } else if (blockTime.isSame(urrentHour)) {
-      eachBlock.addClass('present');
-    } else {
-      eachBlock.addClass('future');
-    }
-  }
-
-  addClasses();
-
-
-  // TODO: Add code to apply the past, present, or future class to each time block by comparing the id to the current hour. HINTS: How can the id attribute of each time-block be used to conditionally add or remove the past, present, and future classes? 
-  
+  // Get item from local storage if any
+  $("#hour-8 .details").val(localStorage.getItem("hour-8"));
+  $("#hour-9 .details").val(localStorage.getItem("hour-9"));
+  $("#hour-10 .details").val(localStorage.getItem("hour-10"));
+  $("#hour-11 .details").val(localStorage.getItem("hour-11"));
+  $("#hour-12 .details").val(localStorage.getItem("hour-12"));
+  $("#hour-13 .details").val(localStorage.getItem("hour-13"));
+  $("#hour-14 .details").val(localStorage.getItem("hour-14"));
+  $("#hour-15 .details").val(localStorage.getItem("hour-15"));
+  $("#hour-16 .details").val(localStorage.getItem("hour-16"));
+  $("#hour-17 .details").val(localStorage.getItem("hour-17"));
 
 
 });
