@@ -16,12 +16,15 @@ $(function () {
   $('.clear-button').on("click", function(event) {
     event.preventDefault();
 
+    var time = $(this).parent().attr('id');
     var task = $(this).siblings('.details');
-
-    task.val("Add Task");
-    localStorage.clear(task.val());
+  
+    localStorage.removeItem(time);
+    
+    task.val("").attr("placeholder", "Add Task");
 
   });
+  
 
   // Get current time
   var timeBlock = $('.time-block');
