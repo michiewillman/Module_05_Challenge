@@ -4,13 +4,15 @@
 
 ## Mockup
 
+![Screenshot of deployed work day scheduling application](./Assets/)
+
 ## Deployment
 
 Below is the original instruction for this assignment.
 
-#
+[Click here to view the deployed application.](https://michiewillman.github.io/Module_05_Challenge/)
 
-#
+[Click here to view my code repository.](https://github.com/michiewillman/Module_05_Challenge)
 
 # 05 Third-Party APIs: Work Day Scheduler
 
