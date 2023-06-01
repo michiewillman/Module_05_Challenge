@@ -1,3 +1,4 @@
+/* Root styles for page to reference */
 :root {
   --darkp: #4c3e4a;
   --lightp: #795574;
@@ -6,6 +7,7 @@
   --delhov: #7b6d79;
 }
 
+/* Custom font added */
 body {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 16px;
@@ -16,10 +18,12 @@ header {
   background-color: var(--darkp);
 }
 
+/* Displays today's date at the top of page */
 #todaysDate {
   color: var(--air);
 }
 
+/* block user can input + save task text in */
 textarea {
   background: transparent;
   border: none;
@@ -29,10 +33,12 @@ textarea {
   padding: 10px;
 }
 
+/* "Add Task" in each block */
 textarea::placeholder {
   color: var(--del);
 }
 
+/* class for each textarea */
 .details {
   white-space: pre-wrap;
 }
@@ -51,21 +57,25 @@ textarea::placeholder {
   border-top: 1px dashed #5d5d5d;
 }
 
+/* time block that occurs in the past */
 .past {
   background-color: #848484;
   /* color: white; */
 }
 
+/* the time block that's occuring presently */
 .present {
   /* color: white; */
   background-color: #dd5b79;
 }
 
+/* time block that occurs in the future */
 .future {
   color: var(--air);
   background-color: #588d89;
 }
 
+/* saves user input */
 .save-button {
   border-left: 1px solid #ffffff;
   border-radius: 0 5px 5px 0;
@@ -78,6 +88,7 @@ textarea::placeholder {
   transition: all 0.3s ease-in-out;
 }
 
+/* clears user input for individual block */
 .clear-button {
   color: var(--air);
   background-color: var(--del);
