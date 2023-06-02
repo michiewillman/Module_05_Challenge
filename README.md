@@ -10,7 +10,7 @@ In addition to the initial criteria, I have also included a clear task button ne
 
 ## Mockup
 
-![Screenshot of deployed work day scheduling application](./Assets/)
+![Screenshot of deployed work day scheduling application](./Assets/Scheduling_App_Mockup.png)
 
 ## Deployment
 
