@@ -2,6 +2,12 @@
 
 ## Description
 
+This project demonstrates my ability to use third-party apis such as bootstrap, jQuery, dayjs and google fonts. The application was designed as an assignment for Module 05 of the coding bootcamp, and the full details of the user story and acceptance criteria are displayed below.
+
+The daily work schedule application deployed here uses a custom font via Google Fonts, Bootstrap column sizing, dayjs api to call the date and time, and local storage to save user tasks in the hour time block in which they were created and saved in.
+
+In addition to the initial criteria, I have also included a clear task button next to the save button, in the case that a user would like to clear only the task they have saved in that block. Although this was not required by the acceptance criteria, I assumed it to be extremely useful for any user of this application.
+
 ## Mockup
 
 ![Screenshot of deployed work day scheduling application](./Assets/)
@@ -14,7 +20,7 @@ Below is the original instruction for this assignment.
 
 [Click here to view my code repository.](https://github.com/michiewillman/Module_05_Challenge)
 
-# 05 Third-Party APIs: Work Day Scheduler
+# Work Day Scheduler Assignment Instructions
 
 ## Your Task
 
