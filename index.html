@@ -16,7 +16,7 @@
       crossorigin="anonymous"/>
     <!-- google font link for Nunito Sans -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./Assets/style.css" />
+    <link rel="stylesheet" href="./Assets/css/style.css" />
     <title>Daily Work Schedule</title>
   </head>
 
@@ -28,7 +28,7 @@
     </header>
     <div class="container-lg px-5">
       <!-- Time blocks -->
-      <div id="hour-9" class="row time-block align-items-center past">
+      <div id="hour-9" class="row time-block align-items-center">
         <div class="col-2 col-md-1 col-lg-1 hour text-center py-4">9 AM</div>
         <textarea class="col-6 col-md-8 col-lg-9 details my-2" placeholder="Add Task" rows="3"></textarea>
         <!-- Save button in each block -->
@@ -40,7 +40,7 @@
       </div>
 
       <!-- ids of the blocks point to set item values for each block, then get item values for each block -->
-      <div id="hour-10" class="row time-block align-items-center present">
+      <div id="hour-10" class="row time-block align-items-center">
         <!-- Cols indicate the spacing of each row -->
         <div class="col-2 col-md-1 col-lg-1 hour text-center py-4">10 AM</div>
         <!-- details class to add values pulled from storage into text area -->
@@ -51,7 +51,7 @@
           <i class="fa fa-minus-circle" aria-hidden="true"></i></button>
       </div>
 
-      <div id="hour-11" class="row time-block align-items-center future">
+      <div id="hour-11" class="row time-block align-items-center">
         <div class="col-2 col-md-1 col-lg-1 hour text-center py-4">11 AM</div>
         <textarea class="col-6 col-md-8 col-lg-9 details my-2" placeholder="Add Task" rows="3"></textarea>
         <button class="btn save-button col-2 col-md-1 col-lg-1" aria-label="save">
@@ -123,6 +123,6 @@
         crossorigin="anonymous"
       ></script>
   
-      <script src="./Assets/script.js"></script>
+      <script src="./Assets/js/script.js"></script>
   </body>
 </html>
