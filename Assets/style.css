@@ -1,100 +1,136 @@
 /* Root styles for page to reference */
 :root {
-  --darkp: #4c3e4a;
-  --lightp: #795574;
-  --air: #e9e9e9;
-  --del: #c5b4c5;
-  --delhov: #7b6d79;
+  --darkprimary: #4f70d2;
+  --lightprimary: #83a0f5;
+  --air: #dcd5ed;
+  --ltblue: #e3eafc;
+  --ltgray: #c4c9da;
+  --drgray: #676a73;
+  --shadow: 0px 0px 10px 2px #83a0f52e;
 }
 
 /* Custom font added */
 body {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 16px;
+  background-color: #E0EAFD;
 }
 
 header {
-  color: var(--air);
-  background-color: var(--darkp);
+  color: var(--drgray);
+  background-color: #D3E1F6;
 }
 
 /* Displays today's date at the top of page */
 #todaysDate {
-  color: var(--air);
+  font-weight: bold;
+  color: var(--darkprimary);
 }
 
-/* block user can input + save task text in */
+/* Just the text input area */
 textarea {
   background: transparent;
   border: none;
+  border-radius: 20px;
   resize: none;
-  color: #ffffff;
-  border-left: 1px solid var(--darkp);
   padding: 10px;
+  color: var(--darkprimary);
+  box-shadow: var(--shadow);
 }
 
 /* "Add Task" in each block */
 textarea::placeholder {
-  color: var(--del);
+  color: var(--ltgray);
 }
 
-/* class for each textarea */
+
 .details {
   white-space: pre-wrap;
 }
 
+/* The whole container for each block */
 .time-block {
-  border-radius: 15px;
-}
-
-.row {
-  border-top: 1px solid white;
+  border-radius: 10px;
+  margin: 10px 0;
+  background-color: #D3E1F6;
 }
 
 .hour {
-  background-color: #ffffff;
-  color: var(--darkp);
-  border-top: 1px dashed #5d5d5d;
+  color: var(--darkprimary);
+  border-radius: 10px 0px 0px 10px;
 }
 
 /* time block that occurs in the past */
 .past {
-  background-color: #848484;
-  /* color: white; */
+  color: var(--ltgray);
+}
+
+.past textarea {
+  color: var(--lightprimary);
+  background-color: var(--ltblue);
 }
 
 /* the time block that's occuring presently */
 .present {
-  /* color: white; */
-  background-color: #dd5b79;
+  color: white;
+}
+
+.present textarea {
+  color: white;
+  background: rgb(69,100,191);
+  background: linear-gradient(0deg, rgba(69,100,191,1) 0%, rgba(91,123,218,1) 100%);
 }
 
 /* time block that occurs in the future */
 .future {
-  color: var(--air);
-  background-color: #588d89;
+  color: white;
+  /* background-color: var(--lightprimary); */
+}
+
+.future textarea {
+  color: white;
+  background: rgb(186,130,203);
+  background: linear-gradient(180deg, rgba(186,130,203,1) 0%, rgba(200,122,174,1) 100%);
 }
 
 /* saves user input */
 .save-button {
-  border-left: 1px solid #ffffff;
-  border-radius: 0 5px 5px 0;
-  background-color: var(--darkp);
-  color: white;
+  border-radius: 15px;
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+  background: rgb(108,143,246);
+  background: radial-gradient(circle, rgba(108,143,246,1) 0%, rgba(86,114,195,1) 100%);
+  background-color: var(--darkprimary);
+  color: var(--ltblue);
+  box-shadow: var(--shadow);
 }
 
 .save-button i:hover {
-  font-size: 20px;
-  transition: all 0.3s ease-in-out;
+  color: white;
+  box-shadow: none;
+}
+
+.btn:hover {
+  color: white;
 }
 
 /* clears user input for individual block */
 .clear-button {
-  color: var(--air);
-  background-color: var(--del);
+  border-radius: 15px;
+  width: 50px;
+  height: 50px;
+  margin-left: 5px;
+  background: rgb(227,234,252);
+  background: radial-gradient(circle, rgba(227,234,252,1) 0%, rgba(170,191,252,1) 100%);
+  color: var(--lightprimary);
+  background-color: var(--ltgray);
+  box-shadow: var(--shadow);
 }
 
 .clear-button:hover {
-  background-color: var(--delhov);
-  color: var(--air);
+  background: rgb(227,234,252);
+  background: radial-gradient(circle, rgba(227,234,252,1) 0%, rgba(131,160,245,1) 100%);
+  color: var(--darkprimary);
+  box-shadow: none;
 }
